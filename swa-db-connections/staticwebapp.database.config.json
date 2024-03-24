@@ -3,7 +3,7 @@
   "data-source": {
     "database-type": "cosmosdb_nosql",
     "options": {
-      "database": "experts",
+      "database": "speakers",
       "schema": "staticwebapp.database.schema.gql"
     },
     "connection-string": "@env('DATABASE_CONNECTION_STRING')"
@@ -29,7 +29,7 @@
   },
   "entities": {
     "Expert": {
-      "source": "experts",
+      "source": "speakers",
       "permissions": [
         {
           "actions": [
