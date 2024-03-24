@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ expert.name }}</mat-card-title>
+    <mat-card-subtitle class="red-text">{{ expert.company }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="expert | image" />
+  <mat-card-content class="blue-text">
+    <h3>{{ expert.job }}</h3>
+  </mat-card-content>
+  <mat-card-content class="blue-text">
+    <h3>{{ expert.bio }}</h3>
+  </mat-card-content>
+  <mat-card-content class="blue-text">
+    <h3>{{ expert.country }}</h3>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button color="accent" [routerLink]="['', expert.id]">
+      Read more...
+    </button>
+    <button mat-button color="accent" [routerLink]="['/edit', expert.id]">
+      EDIT
+    </button>
+  </mat-card-actions>
+</mat-card>

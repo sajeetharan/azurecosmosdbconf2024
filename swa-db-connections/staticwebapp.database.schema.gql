@@ -1,0 +1,10 @@
+type Expert @model {
+  id: ID
+  name: String
+  company: String
+  job: String
+  photoUrl: String
+  country: String
+  shortBio: String
+  bio:String
+}

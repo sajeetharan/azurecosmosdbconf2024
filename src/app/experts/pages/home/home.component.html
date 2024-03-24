@@ -1,0 +1,43 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [opened]="true">
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a routerLink="./list" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>list</mat-icon>
+        <span>Spekers</span>
+      </a>
+    </mat-nav-list>
+    <!-- <mat-nav-list>
+      <a routerLink="./add" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>add</mat-icon>
+        <span>Add a expert</span>
+      </a>
+    </mat-nav-list> -->
+    <mat-nav-list>
+      <a routerLink="./search" mat-list-item (click)="sidenav.toggle()">
+        <mat-icon mat-list-icon>search</mat-icon>
+        <span>Search a session</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="../../../../assets/planet.svg" alt="Logo" height="40">
+    <span class="spacer">Azure CosmosDB Conf2024</span>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

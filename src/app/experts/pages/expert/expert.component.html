@@ -1,0 +1,28 @@
+<mat-grid-list cols="1" *ngIf="!expert; else divexpert">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divexpert>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+    <div fxFlex="50">
+      <h1>
+        {{ expert.name }} <small> - {{ expert.company }}</small>
+      </h1>
+      <mat-divider></mat-divider>
+      <img [src]="expert | image" />
+    </div>
+
+    <div fxFlex="50">
+      <h1>{{ expert.job }}</h1>
+      <mat-list>
+        <mat-list-item>Team : {{ expert.job }}</mat-list-item>
+        <mat-list-item>Country : {{ expert.country }}</mat-list-item>
+        <mat-list-item>Bio : {{ expert.bio }}</mat-list-item>
+      </mat-list>
+      <br />
+      <button mat-button color="warn" (click)="comeBack()">Go back</button>
+    </div>
+  </div>
+</ng-template>

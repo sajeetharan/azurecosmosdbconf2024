@@ -1,0 +1,20 @@
+<h1>Speakers</h1>
+<mat-divider></mat-divider>
+
+<div
+  fxLayout="row wrap"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px grid"
+  [@listAnimation]="experts.length"
+>
+  <div
+    fxFlex="20"
+    fxFlex.lg="15"
+    fxFlex.sm="30"
+    *ngFor="let expert of experts"
+    class="animate__animated animate__fadeIn"
+  >
+    <app-expert-card [expert]="expert"></app-expert-card>
+  </div>
+</div>
